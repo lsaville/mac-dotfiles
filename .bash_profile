@@ -6,7 +6,8 @@ export PS1="\W \[\033[0;33m\]⚡\[\033[0;39m\] "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
-export EDITOR='/usr/local/bin/atom'
+export VISUAL=vim
+export EDITOR="$VISUAL"
 export CC=/usr/local/bin/gcc-4.2
 export CC=/Applications/Xcode.app/Contents/Developer/usr/bin/gcc
 
@@ -51,9 +52,6 @@ function mdc () {
 function da () {
   gd "$@" && ga "$@"
 }
-
-# programs that launch editors (e.g. git) will use Atom
-export EDITOR="atom -w"
 
 #from the spike bash_profile talk
 alias reload='source ~/.bash_profile'
