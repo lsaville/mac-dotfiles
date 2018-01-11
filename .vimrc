@@ -15,6 +15,8 @@ Plugin 'elixir-lang/vim-elixir'
 "Plugin 'rakr/vim-one'
 Plugin 'joshdick/onedark.vim'
 Plugin 'elmcast/elm-vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -35,6 +37,10 @@ filetype plugin indent on    " required
 
 " Making leader a space
 let mapleader = " "
+
+" Smarter tab line via vim-airline readme
+let g:airline#extensions#tabline#enabled=1
+let g:airline_theme='molokai'
 
 " Disable polygot for elm thats being required directly.
 let g:polyglot_disabled = ['elm']
@@ -66,6 +72,10 @@ endif
 " toggle between VCenterCursor and scrolloff=0
 nnoremap <leader>zz :call VCenterCursor()<CR>
 
+" cruise buffer list
+nmap <C-f> :bn<CR>
+nmap <C-d> :bp<CR>
+
 " " keymap for easy pane motion, apparently obviated by the
 " vim-tmux-navigation
 
@@ -84,11 +94,15 @@ set noswapfile
 set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 set autoindent
 set mouse=a
-set pastetoggle=<leader>p
 set showcmd
+set hlsearch
+set incsearch
+
+set pastetoggle=<F2>
+:map <F3> :nohl<CR>
 
 " " nerdtree access
-nnoremap <leader>n :NERDTree<cr>
+nnoremap <leader>n :NERDTreeToggle<cr>
 
 "Colorscheme
 colorscheme onedark
