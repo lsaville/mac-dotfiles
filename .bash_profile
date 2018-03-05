@@ -11,6 +11,9 @@ export EDITOR="$VISUAL"
 export CC=/usr/local/bin/gcc-4.2
 export CC=/Applications/Xcode.app/Contents/Developer/usr/bin/gcc
 
+# enable iex shell history
+export ERL_AFLAGS="-kernel shell_history enabled"
+
 # export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$HOME/bin
 # export PATH="/usr/local/bin:$PATH"
 
@@ -75,3 +78,5 @@ export VLC_PATH=/Applications/VLC.app/Contents/MacOS/lib
 export VLC_PLUGIN_PATH=/Applications/VLC.app/Contents/MacOS/plugins
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
+
+export PATH="$HOME/.cargo/bin:$PATH"
